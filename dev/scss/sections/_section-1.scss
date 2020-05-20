@@ -2,8 +2,48 @@
     Section 1
 ============= */
 #section-1{
-    .grid-content{
-        
-    }
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    height: 360px;
 
+    @include md {
+        height: 683px;
+    }
+    #section-1-container {
+        color: $black;
+        display: grid;
+        grid-template-areas: ". section-1 .";
+        grid-template-columns: 10px auto 10px;
+        padding: 45px 0 45px;
+        text-align: center;
+
+        @include md {
+            grid-template-columns: 10% auto 10%;
+        }
+
+
+        #section-1-content {
+            grid-area: section-;
+            text-align: center;
+            h1{
+                font-family: 'Comfortaa';
+                color: $teal;
+                font-size: rem-calc(21);
+                line-height: rem-calc(26);
+                margin-bottom: 35px;
+            }
+
+            p {
+                font-family: 'Comfortaa';
+                color: $blue;
+                font-size: rem-calc(18);
+                line-height: rem-calc(26);
+                text-align: justify;
+            }
+            img {
+                padding-top: rem-calc(5);
+            }
+
+        }
+}
 }
